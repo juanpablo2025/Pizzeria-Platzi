@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name="pizza_order")
@@ -41,9 +42,8 @@ public class OrderEntity {
     @JsonIgnore
     private CustomerEntity customer;
 
-    @OneToOne(mappedBy = "order",fetch=fetchType.EAGER)
+    @OneToOne(mappedBy = "order",fetch=FetchType.EAGER)
     @OrderBy("price DESC")
-
     private List<OrderItemEntity> items;
 
 
