@@ -8,6 +8,8 @@ public class PizzeriaPlatziApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PizzeriaPlatziApplication.class, args);
+
+		//se genera proyecto
 	}
 
 }
